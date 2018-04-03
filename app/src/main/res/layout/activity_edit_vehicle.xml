@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context="flairinfosystem.com.mobiletracking.SignUp">
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/veh_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Vehicle Number"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawableLeft="@drawable/bus"/>
+
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/dri_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Driver Name"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawableLeft="@drawable/person"/>
+
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Driver Mobile Number"
+        android:maxLength="10"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawableLeft="@drawable/phone"/>
+
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape1"
+        android:textSize="20dp"
+        android:text="update"/>
+</LinearLayout>

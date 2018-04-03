@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_map_activity_admin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivityAdmin"
+    tools:showIn="@layout/activity_map_admin">
+
+    <fragment
+        android:id="@+id/mapadmin"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapadmin"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:padding="10dp"
+                android:id="@+id/mapusera"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact No"
+                android:padding="10dp"
+                android:id="@+id/mapcontacta"
+                android:layout_below="@+id/mapusera"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle No"
+                android:padding="10dp"
+                android:id="@+id/mapVehicleNoa"
+                android:layout_below="@+id/mapcontacta"
+                />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context="flairinfosystem.com.mobiletracking.SignUp">
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/trackno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Tracking Mobile Number"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:drawableLeft="@drawable/phonetrack"/>
+
+
+
+
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape1"
+        android:textSize="20dp"
+        android:text="update"/>
+</LinearLayout>

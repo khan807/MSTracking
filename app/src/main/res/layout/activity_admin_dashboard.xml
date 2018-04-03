@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/user_manag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape1"
+            android:drawableTop="@drawable/user"
+            android:paddingTop="20dp"
+            android:text="@string/user_management"
+            android:textColor="#000" />
+        <Button
+            android:id="@+id/tracking"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape1"
+            android:drawableTop="@drawable/bus"
+            android:paddingTop="20dp"
+            android:text="@string/track_vehicle"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/vehicle_manag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape1"
+            android:drawableTop="@drawable/bus"
+            android:paddingTop="20dp"
+            android:text="Vehicle Management"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/route_manag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape1"
+            android:drawableTop="@drawable/route"
+            android:paddingTop="20dp"
+            android:text="Route  Management"
+            android:textColor="#000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/trackno_manag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape1"
+            android:drawableTop="@drawable/phonetrack"
+            android:paddingTop="20dp"
+            android:text="Tracking Number Management"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/sci_manag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape1"
+            android:drawableTop="@drawable/school"
+            android:paddingTop="20dp"
+            android:text="School/College Management"
+            android:textColor="#000" />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

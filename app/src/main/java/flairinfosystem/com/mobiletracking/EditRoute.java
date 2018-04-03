@@ -1,0 +1,121 @@
+package flairinfosystem.com.mobiletracking;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EditRoute extends Activity {
+    TextInputEditText routename_TIL;
+    Button add_btn;
+    String routenameStr,getnameStr;
+    ProgressDialog progressDialog;
+    JSONParser parser = new JSONParser();
+    private static final String TAG_SUCCESS = "success";
+
+
+    public String addUrl = "http://practoe.flairinfosystems.in/practoe/editroute.php";
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_route);
+
+        routename_TIL=findViewById(R.id.route_name);
+        add_btn=findViewById(R.id.update);
+
+        getnameStr=getIntent().getStringExtra("name");
+        routename_TIL.setText(getnameStr);
+
+        add_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if((routename_TIL.getText().toString().length())>0 )
+                {
+
+                    new LineAdding().execute();
+                }else{
+                    Toast.makeText(getApplicationContext(),"Enter Route Name",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+    }
+    public class LineAdding extends AsyncTask<String, String, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressDialog = new ProgressDialog(EditRoute.this);
+            progressDialog.setMessage("Please wait......");
+            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.show();
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            routenameStr=routename_TIL.getText().toString();
+
+            List<NameValuePair> args = new ArrayList<>();
+            args.add(new BasicNameValuePair("routename",getnameStr));
+            args.add(new BasicNameValuePair("newroutename",routenameStr));
+
+
+
+            JSONObject json = parser.makeHttpRequest(addUrl, "POST", args);
+
+            Log.d("Create Response", json.toString());
+
+            // check for success tag
+            try {
+                int success = json.getInt(TAG_SUCCESS);
+
+                if (success == 1) {
+                    // successfully created a user
+
+                    Intent i=new Intent(EditRoute.this,RouteManagement.class);
+                    startActivity(i);
+                    // closing this screen
+                    finish();
+                } else {
+                    // failed to create user
+                    Log.d("failed to create user", json.toString());
+
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Intent i=new Intent(EditRoute.this,RouteManagement.class);
+            startActivity(i);
+            progressDialog.dismiss();
+
+
+
+        }
+    }
+
+}

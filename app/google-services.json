@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1014003476126",
+    "firebase_url": "https://mybusapplication-aca44.firebaseio.com",
+    "project_id": "mybusapplication-aca44",
+    "storage_bucket": "mybusapplication-aca44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014003476126:android:2bdd3fad62ad2a51",
+        "android_client_info": {
+          "package_name": "flairinfosystem.com.clientapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014003476126-a0huv11nclnmp46klcaauhq46hngb78n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "flairinfosystem.com.clientapp",
+            "certificate_hash": "a37bd20b9517746463a7ed15890d304087ebe34f"
+          }
+        },
+        {
+          "client_id": "1014003476126-nr8sof1vejoi3prktcr3ikn6kr1628t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjViYyPbVH8NI3AX47h0EiuHzVgXM1vPY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014003476126-nr8sof1vejoi3prktcr3ikn6kr1628t4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014003476126:android:e2ced59ba7d8b414",
+        "android_client_info": {
+          "package_name": "flairinfosystem.com.mobiletracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014003476126-horbhoe9fjk4s275qvsnrnprg0bdmdjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "flairinfosystem.com.mobiletracking",
+            "certificate_hash": "a37bd20b9517746463a7ed15890d304087ebe34f"
+          }
+        },
+        {
+          "client_id": "1014003476126-nr8sof1vejoi3prktcr3ikn6kr1628t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjViYyPbVH8NI3AX47h0EiuHzVgXM1vPY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014003476126-nr8sof1vejoi3prktcr3ikn6kr1628t4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
