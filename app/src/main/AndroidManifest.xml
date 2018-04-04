@@ -34,38 +34,54 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".AdminDashboard" />
-        <activity android:name=".UserManagement"
-            android:parentActivityName=".AdminDashboard"/>
-        <activity android:name=".SCIManagement"
-            android:parentActivityName=".AdminDashboard"/>
-        <activity android:name=".VehicleManagement"
-            android:parentActivityName=".AdminDashboard"/>
-        <activity android:name=".RouteManagement"
-            android:parentActivityName=".AdminDashboard"/>
-        <activity android:name=".TrackingNoManagement"
-            android:parentActivityName=".AdminDashboard"/>
-        <activity android:name=".Tracking"
-            android:parentActivityName=".AdminDashboard"/>
-        <activity android:name=".AddUser"
-            android:parentActivityName=".UserManagement"/>
-        <activity android:name=".EditUser"
-            android:parentActivityName=".UserManagement"/>
-        <activity android:name=".AddVehicle"
-            android:parentActivityName=".VehicleManagement"/>
-        <activity android:name=".EditVehicle"
-            android:parentActivityName=".VehicleManagement"/>
-        <activity android:name=".AddTrackingNo"
-            android:parentActivityName=".TrackingNoManagement"/>
-        <activity android:name=".EditTrackingNo"
-            android:parentActivityName=".TrackingNoManagement"/>
-        <activity android:name=".AddSCI"
-            android:parentActivityName=".SCIManagement"/>
-        <activity android:name=".EditSCI"
-            android:parentActivityName=".SCIManagement"/>
-        <activity android:name=".AddRoute"
-            android:parentActivityName=".RouteManagement"/>
-        <activity android:name=".EditRoute"
-            android:parentActivityName=".RouteManagement"/>
+        <activity
+            android:name=".UserManagement"
+            android:parentActivityName=".AdminDashboard" />
+        <activity
+            android:name=".SCIManagement"
+            android:parentActivityName=".AdminDashboard" />
+        <activity
+            android:name=".VehicleManagement"
+            android:parentActivityName=".AdminDashboard" />
+        <activity
+            android:name=".RouteManagement"
+            android:parentActivityName=".AdminDashboard" />
+        <activity
+            android:name=".TrackingNoManagement"
+            android:parentActivityName=".AdminDashboard" />
+        <activity
+            android:name=".Tracking"
+            android:parentActivityName=".AdminDashboard" />
+        <activity
+            android:name=".AddUser"
+            android:parentActivityName=".UserManagement" />
+        <activity
+            android:name=".EditUser"
+            android:parentActivityName=".UserManagement" />
+        <activity
+            android:name=".AddVehicle"
+            android:parentActivityName=".VehicleManagement" />
+        <activity
+            android:name=".EditVehicle"
+            android:parentActivityName=".VehicleManagement" />
+        <activity
+            android:name=".AddTrackingNo"
+            android:parentActivityName=".TrackingNoManagement" />
+        <activity
+            android:name=".EditTrackingNo"
+            android:parentActivityName=".TrackingNoManagement" />
+        <activity
+            android:name=".AddSCI"
+            android:parentActivityName=".SCIManagement" />
+        <activity
+            android:name=".EditSCI"
+            android:parentActivityName=".SCIManagement" />
+        <activity
+            android:name=".AddRoute"
+            android:parentActivityName=".RouteManagement" />
+        <activity
+            android:name=".EditRoute"
+            android:parentActivityName=".RouteManagement" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -79,13 +95,17 @@
             android:value="@string/google_maps_key" />
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
+            android:value="@integer/google_play_services_version" />
 
         <activity android:name=".LoginAs" />
         <activity
             android:name=".MapActivityAdmin"
             android:label="@string/title_activity_map" />
-        <activity android:name=".AdminList"></activity>
+        <activity android:name=".AdminList" />
+        <activity android:name=".SignInDriver" />
+        <activity android:name=".SignUpDriver" />
+        <activity android:name=".SignInParent" />
+        <activity android:name=".SignUpParent"></activity>
     </application>
 
 </manifest>

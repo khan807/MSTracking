@@ -30,11 +30,11 @@ public class LoginAs extends AppCompatActivity implements View.OnClickListener {
                 startActivity(i);
                 break;
             case R.id.driverbutton:
-                Intent i1=new Intent(this,SignIn.class);
+                Intent i1=new Intent(this,SignInDriver.class);
                 startActivity(i1);
                 break;
             case R.id.parentbutton:
-                Intent i2=new Intent(this,SignIn.class);
+                Intent i2=new Intent(this,SignInParent.class);
                 startActivity(i2);
                 break;
         }

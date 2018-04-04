@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SignUp">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username(Email Address)"
+        android:id="@+id/signupemail"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:drawableLeft="@drawable/email"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUsername"
+        android:hint="Name"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_below="@id/signupemail"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/person"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/signUsername"
+        android:id="@+id/signPass"
+        android:layout_margin="5dp"
+        android:drawableLeft="@drawable/pwd"
+        android:padding="10dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signCnfmPass"
+        android:inputType="textPassword"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/signPass"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:drawableLeft="@drawable/pwd"
+        />
+
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/signCnfmPass"-->
+        <!--android:hint="Bus registration Number"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:id="@+id/busnotext"-->
+        <!--android:drawableLeft="@drawable/bus"-->
+        <!--/> -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/busnotext"
+        android:hint="Mobile Number"
+        android:inputType="number"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:id="@+id/contactnotext"
+        android:drawableLeft="@drawable/phone"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Register"
+        android:background="@drawable/button_shape1"
+        android:id="@+id/getloc"
+        android:textSize="18dp"
+        />
+
+</LinearLayout>
