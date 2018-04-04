@@ -9,17 +9,19 @@ public class Users {
     private String user;
     private double lat;
     private double lon;
+//    private double number;
     private String busno;
-    // private String contactno;
+     private String contactno;
 
     public Users(){
 
     }
 
-    public Users(String user, double lat, double lon,String busno){
+    public Users(String user, double lat, double lon,String busno,String contactno){
         this.user=user;
         this.lat=lat;
         this.lon=lon;
+        this.contactno=contactno;
         this.busno=busno;
     }
 
@@ -38,6 +40,14 @@ public class Users {
 
     public void setLat(double lat) {
         this.lat = lat;
+    }
+
+    public String getNumber() {
+        return contactno;
+    }
+
+    public void setNumber(String contactno) {
+        this.contactno = contactno;
     }
 
     public double getLon() {

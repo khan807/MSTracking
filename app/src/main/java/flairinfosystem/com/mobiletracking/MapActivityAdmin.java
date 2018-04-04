@@ -116,8 +116,15 @@ public class MapActivityAdmin extends AppCompatActivity implements GoogleMap.OnC
         mRef.child(postkey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                latitudes=(Double)dataSnapshot.child("lat").getValue();
-                longitudes=(Double)dataSnapshot.child("lon").getValue();
+//                latitudes=(Double)dataSnapshot.child("lat").getValue();
+//                longitudes=(Double)dataSnapshot.child("lon").getValue();
+
+               GPSTracker gps=new GPSTracker(MapActivityAdmin.this);
+
+                if(gps.canGetLocation()) {
+                    latitudes = gps.getLatitude();
+                    longitudes = gps.getLongitude();
+                }
                 user=(String)dataSnapshot.child("user").getValue();
                 contact=(String)dataSnapshot.child("contactno").getValue().toString();
                 vehicle=(String)dataSnapshot.child("busno").getValue().toString();
@@ -147,8 +154,8 @@ public class MapActivityAdmin extends AppCompatActivity implements GoogleMap.OnC
                             String city=returnaddress.getCountryName();
 
                             str.append(area + " ");
-                            str.append(locality +"" );
-                            str.append(city+"");
+                            str.append(locality +" ");
+                            str.append(city+" ");
                             textView1.setText("Current Location :" +str);
 
                         } catch (IOException e) {

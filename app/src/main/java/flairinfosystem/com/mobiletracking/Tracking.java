@@ -43,6 +43,8 @@ import com.google.firebase.database.FirebaseDatabase;
         // Milliseconds
 
         protected LocationManager locationManager;
+        GPSTracker  gps;
+        double latitudes,longitudes;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
             databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
 
+            gps=new GPSTracker(Tracking.this);
+
+
+            if(gps.canGetLocation()) {
+                latitudes = gps.getLatitude();
+                longitudes = gps.getLongitude();
+            }
+
             firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Users, UserViewHoldere>(
                     Users.class,
                     R.layout.list_user2,
@@ -73,14 +83,14 @@ import com.google.firebase.database.FirebaseDatabase;
                 protected void populateViewHolder(UserViewHoldere viewHolder, Users model, int position) {
                     viewHolder.setUser(model.getUser());
                     viewHolder.setBusno(model.getBusno());
-                    viewHolder.setLon(model.getLon());
+                    viewHolder.setLon(longitudes);
 
                     final String postid = getRef(position).getKey();
                     //String postlat=model.getLat().toString();
                     final double postlat = model.getLat();
                     final double postlongi = model.getLon();
 
-                    final String stringlan = Double.toString(postlat);
+                    final String stringlan = Double.toString(latitudes);
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
