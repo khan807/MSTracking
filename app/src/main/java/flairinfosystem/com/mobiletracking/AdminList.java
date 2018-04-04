@@ -31,7 +31,7 @@ public class AdminList extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     public static String UPlat = "";
-    public static String UPlng = "";
+    public static double UPlng;
 
     private DatabaseReference mDatabase;
 
@@ -44,6 +44,8 @@ public class AdminList extends AppCompatActivity {
     // Milliseconds
 
     protected LocationManager locationManager;
+    double latitudes,longitudes;
+    GPSTracker gps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,14 @@ public class AdminList extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
 
+         gps=new GPSTracker(AdminList.this);
+
+
+        if(gps.canGetLocation()) {
+            latitudes = gps.getLatitude();
+            longitudes = gps.getLongitude();
+        }
+
         firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Users, UserViewHoldere>(
                 Users.class,
                 R.layout.list_user2,
@@ -72,18 +82,19 @@ public class AdminList extends AppCompatActivity {
             protected void populateViewHolder(UserViewHoldere viewHolder, Users model, int position) {
                 viewHolder.setUser(model.getUser());
                 viewHolder.setBusno(model.getBusno());
-                viewHolder.setLon(model.getLon());
+                viewHolder.setNumber(model.getNumber());
 
                 final String postid = getRef(position).getKey();
                 //String postlat=model.getLat().toString();
                 final double postlat = model.getLat();
                 final double postlongi = model.getLon();
 
-                final String stringlan = Double.toString(postlat);
+                final String stringlat = Double.toString(latitudes);
+                final String stringlong = Double.toString(longitudes);
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(AdminList.this, stringlan, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminList.this, stringlat+""+stringlong, Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(AdminList.this, MapActivityAdmin.class);
                         //intent2.putExtra("lati",postlat);
                         //intent2.putExtra("longi",postlongi);
@@ -116,20 +127,20 @@ public class AdminList extends AppCompatActivity {
             textView.setText(user);
         }
 
-        public void setLat(double lat) {
-            //TextView textView1=(TextView)mView.findViewById(R.id.usrname2);
-            //NumberFormat nm=NumberFormat.getNumberInstance();
+//        public void setLat(double lat) {
+//            //TextView textView1=(TextView)mView.findViewById(R.id.usrname2);
+//            //NumberFormat nm=NumberFormat.getNumberInstance();
+//
+//            //String numlat=Double.toString(lat);
+//            //textView1.setText(numlat);
+//        }
 
-            //String numlat=Double.toString(lat);
-            //textView1.setText(numlat);
-        }
-
-        public void setLon(double lon) {
+        public void setNumber(String contactno) {
             TextView textView2 = (TextView) mView.findViewById(R.id.usrname3e);
             //NumberFormat nm=NumberFormat.getNumberInstance();
 
-            String numlon = Double.toString(lon);
-            textView2.setText(numlon);
+            //String numlon = Double.toString(number);
+            textView2.setText(contactno);
         }
 
         public void setBusno(String busno) {
